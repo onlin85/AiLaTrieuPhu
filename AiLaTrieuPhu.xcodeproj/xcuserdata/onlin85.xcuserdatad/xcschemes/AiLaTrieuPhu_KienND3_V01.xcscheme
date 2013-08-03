@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2F987C0117A5868D00893057"
-               BuildableName = "AiLaTrieuPhu_KienND3_V01.app"
+               BuildableName = "AiLaTrieuPhu.app"
                BlueprintName = "AiLaTrieuPhu"
                ReferencedContainer = "container:AiLaTrieuPhu.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2F987C0117A5868D00893057"
-            BuildableName = "AiLaTrieuPhu_KienND3_V01.app"
+            BuildableName = "AiLaTrieuPhu.app"
             BlueprintName = "AiLaTrieuPhu"
             ReferencedContainer = "container:AiLaTrieuPhu.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2F987C0117A5868D00893057"
-            BuildableName = "AiLaTrieuPhu_KienND3_V01.app"
+            BuildableName = "AiLaTrieuPhu.app"
             BlueprintName = "AiLaTrieuPhu"
             ReferencedContainer = "container:AiLaTrieuPhu.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2F987C0117A5868D00893057"
-            BuildableName = "AiLaTrieuPhu_KienND3_V01.app"
+            BuildableName = "AiLaTrieuPhu.app"
             BlueprintName = "AiLaTrieuPhu"
             ReferencedContainer = "container:AiLaTrieuPhu.xcodeproj">
          </BuildableReference>
