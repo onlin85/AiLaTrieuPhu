@@ -11,10 +11,11 @@
 		2F33A05917A744D400E2AB43 /* NDKHighScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F33A05717A744D400E2AB43 /* NDKHighScoreView.xib */; };
 		2F33A05C17A7466500E2AB43 /* NDKEmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F33A05B17A7466500E2AB43 /* NDKEmptyCell.m */; };
 		2F33A05E17A7468600E2AB43 /* NDKEmptyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F33A05D17A7468600E2AB43 /* NDKEmptyCell.xib */; };
+		2F3CA94B17AE5802006115BB /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F3CA94A17AE5802006115BB /* libsqlite3.0.dylib */; };
+		2F3CA95D17AE5AC3006115BB /* NDKQuestionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3CA95C17AE5AC3006115BB /* NDKQuestionObject.m */; };
+		2F3CA96017AE5AE9006115BB /* NDKDatabaseQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3CA95F17AE5AE9006115BB /* NDKDatabaseQuestion.m */; };
 		2F982BBC17A820A5002AE9A1 /* NDKStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F982BBA17A820A5002AE9A1 /* NDKStartView.m */; };
 		2F982BBD17A820A5002AE9A1 /* NDKStartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F982BBB17A820A5002AE9A1 /* NDKStartView.xib */; };
-		2F982BC117A8267E002AE9A1 /* NDKIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F982BBF17A8267E002AE9A1 /* NDKIntroductionView.m */; };
-		2F982BC217A8267E002AE9A1 /* NDKIntroductionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F982BC017A8267E002AE9A1 /* NDKIntroductionView.xib */; };
 		2F982BC417A828A2002AE9A1 /* call.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2F982BC317A828A2002AE9A1 /* call.jpg */; };
 		2F987C0617A5868D00893057 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F987C0517A5868D00893057 /* UIKit.framework */; };
 		2F987C0817A5868D00893057 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F987C0717A5868D00893057 /* Foundation.framework */; };
@@ -52,6 +53,7 @@
 		2F987C5B17A58B6D00893057 /* AudioLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F987C5A17A58B6D00893057 /* AudioLoadView.m */; };
 		2FD219C217A6DD4F00CFC967 /* NDKOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD219C017A6DD4F00CFC967 /* NDKOptionView.m */; };
 		2FD219C317A6DD4F00CFC967 /* NDKOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD219C117A6DD4F00CFC967 /* NDKOptionView.xib */; };
+		2FED55CA17AE942B007BD92C /* NDKHighScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FED55C917AE942B007BD92C /* NDKHighScore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,12 +63,14 @@
 		2F33A05A17A7466500E2AB43 /* NDKEmptyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDKEmptyCell.h; path = ../NDKEmptyCell.h; sourceTree = "<group>"; };
 		2F33A05B17A7466500E2AB43 /* NDKEmptyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDKEmptyCell.m; path = ../NDKEmptyCell.m; sourceTree = "<group>"; };
 		2F33A05D17A7468600E2AB43 /* NDKEmptyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NDKEmptyCell.xib; path = ../NDKEmptyCell.xib; sourceTree = "<group>"; };
+		2F3CA94A17AE5802006115BB /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		2F3CA95B17AE5AC3006115BB /* NDKQuestionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDKQuestionObject.h; sourceTree = "<group>"; };
+		2F3CA95C17AE5AC3006115BB /* NDKQuestionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDKQuestionObject.m; sourceTree = "<group>"; };
+		2F3CA95E17AE5AE9006115BB /* NDKDatabaseQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDKDatabaseQuestion.h; sourceTree = "<group>"; };
+		2F3CA95F17AE5AE9006115BB /* NDKDatabaseQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDKDatabaseQuestion.m; sourceTree = "<group>"; };
 		2F982BB917A820A5002AE9A1 /* NDKStartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDKStartView.h; path = ../NDKStartView.h; sourceTree = "<group>"; };
 		2F982BBA17A820A5002AE9A1 /* NDKStartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDKStartView.m; path = ../NDKStartView.m; sourceTree = "<group>"; };
 		2F982BBB17A820A5002AE9A1 /* NDKStartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NDKStartView.xib; path = ../NDKStartView.xib; sourceTree = "<group>"; };
-		2F982BBE17A8267D002AE9A1 /* NDKIntroductionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDKIntroductionView.h; path = ../NDKIntroductionView.h; sourceTree = "<group>"; };
-		2F982BBF17A8267E002AE9A1 /* NDKIntroductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDKIntroductionView.m; path = ../NDKIntroductionView.m; sourceTree = "<group>"; };
-		2F982BC017A8267E002AE9A1 /* NDKIntroductionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NDKIntroductionView.xib; path = ../NDKIntroductionView.xib; sourceTree = "<group>"; };
 		2F982BC317A828A2002AE9A1 /* call.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = call.jpg; sourceTree = SOURCE_ROOT; };
 		2F987C0217A5868D00893057 /* AiLaTrieuPhu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiLaTrieuPhu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F987C0517A5868D00893057 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -111,6 +115,8 @@
 		2FD219BF17A6DD4F00CFC967 /* NDKOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDKOptionView.h; path = ../NDKOptionView.h; sourceTree = "<group>"; };
 		2FD219C017A6DD4F00CFC967 /* NDKOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDKOptionView.m; path = ../NDKOptionView.m; sourceTree = "<group>"; };
 		2FD219C117A6DD4F00CFC967 /* NDKOptionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NDKOptionView.xib; path = ../NDKOptionView.xib; sourceTree = "<group>"; };
+		2FED55C817AE942B007BD92C /* NDKHighScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDKHighScore.h; sourceTree = "<group>"; };
+		2FED55C917AE942B007BD92C /* NDKHighScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDKHighScore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F3CA94B17AE5802006115BB /* libsqlite3.0.dylib in Frameworks */,
 				2F987C5817A58A0600893057 /* AVFoundation.framework in Frameworks */,
 				2F987C0617A5868D00893057 /* UIKit.framework in Frameworks */,
 				2F987C0817A5868D00893057 /* Foundation.framework in Frameworks */,
@@ -131,6 +138,13 @@
 		2F987BF917A5868C00893057 = {
 			isa = PBXGroup;
 			children = (
+				2FED55C817AE942B007BD92C /* NDKHighScore.h */,
+				2FED55C917AE942B007BD92C /* NDKHighScore.m */,
+				2F3CA95E17AE5AE9006115BB /* NDKDatabaseQuestion.h */,
+				2F3CA95F17AE5AE9006115BB /* NDKDatabaseQuestion.m */,
+				2F3CA95B17AE5AC3006115BB /* NDKQuestionObject.h */,
+				2F3CA95C17AE5AC3006115BB /* NDKQuestionObject.m */,
+				2F3CA94A17AE5802006115BB /* libsqlite3.0.dylib */,
 				2F987C0B17A5868D00893057 /* Sources */,
 				2F987C0417A5868D00893057 /* Frameworks */,
 				2F987C0317A5868D00893057 /* Products */,
@@ -168,9 +182,6 @@
 				2F33A05517A744D400E2AB43 /* NDKHighScoreView.h */,
 				2F33A05617A744D400E2AB43 /* NDKHighScoreView.m */,
 				2F33A05717A744D400E2AB43 /* NDKHighScoreView.xib */,
-				2F982BBE17A8267D002AE9A1 /* NDKIntroductionView.h */,
-				2F982BBF17A8267E002AE9A1 /* NDKIntroductionView.m */,
-				2F982BC017A8267E002AE9A1 /* NDKIntroductionView.xib */,
 				2F987C2217A586DF00893057 /* NDKMainView.h */,
 				2F987C2317A586DF00893057 /* NDKMainView.m */,
 				2F987C2417A586DF00893057 /* NDKMainView.xib */,
@@ -314,7 +325,6 @@
 				2F33A05917A744D400E2AB43 /* NDKHighScoreView.xib in Resources */,
 				2F33A05E17A7468600E2AB43 /* NDKEmptyCell.xib in Resources */,
 				2F982BBD17A820A5002AE9A1 /* NDKStartView.xib in Resources */,
-				2F982BC217A8267E002AE9A1 /* NDKIntroductionView.xib in Resources */,
 				2F982BC417A828A2002AE9A1 /* call.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,7 +344,9 @@
 				2F33A05817A744D400E2AB43 /* NDKHighScoreView.m in Sources */,
 				2F33A05C17A7466500E2AB43 /* NDKEmptyCell.m in Sources */,
 				2F982BBC17A820A5002AE9A1 /* NDKStartView.m in Sources */,
-				2F982BC117A8267E002AE9A1 /* NDKIntroductionView.m in Sources */,
+				2F3CA95D17AE5AC3006115BB /* NDKQuestionObject.m in Sources */,
+				2F3CA96017AE5AE9006115BB /* NDKDatabaseQuestion.m in Sources */,
+				2FED55CA17AE942B007BD92C /* NDKHighScore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

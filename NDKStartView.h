@@ -7,23 +7,33 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AudioLoadView.h"
 @interface NDKStartView : UIViewController
+{
+    AudioLoadView*audioLoad;
+}
+- (IBAction)btn50_50:(id)sender;
+- (IBAction)btnRefresh:(id)sender;
+- (IBAction)btnHelpKG:(id)sender;
+
 @property (retain, nonatomic) IBOutlet UILabel *labelTime;
-- (IBAction)btnHome:(id)sender;
+
 @property (retain, nonatomic) IBOutlet UIButton *btnD;
 @property (retain, nonatomic) IBOutlet UIButton *btnC;
 @property (retain, nonatomic) IBOutlet UIButton *btnB;
 @property (retain, nonatomic) IBOutlet UIButton *btnA;
-@property (retain, nonatomic) IBOutlet UILabel *timeLabel;
-
-
+@property   (retain,nonatomic)IBOutlet UILabel*questionLabel;
+@property (retain,nonatomic)IBOutlet UIButton *soundSet;
+@property (retain,nonatomic)IBOutlet UILabel *numQuest;
+@property (retain,nonatomic)IBOutlet UIButton*changeQuestion;
+@property (retain,nonatomic)IBOutlet UIButton*btn50_50;
 
 - (IBAction)btnChangeQuestion:(id)sender;
 - (IBAction)btnKhanGia:(id)sender;
 - (IBAction)btnCall:(id)sender;
 - (IBAction)btn50_50:(id)sensder;
-
+- (IBAction)btnMuteVolumne:(id)sender;
+- (IBAction)btnHomeBack:(id)sender;
 
 -(IBAction)animation :(id)sender;
 -(IBAction)answer:(id)sender;

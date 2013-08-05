@@ -65,7 +65,6 @@
 - (BOOL)             application: (UIApplication *)application
    didFinishLaunchingWithOptions: (NSDictionary *)launchOptions
 {
-    [super ViewWillAppear];
     
     [self setCustomNavigationBar];
 }

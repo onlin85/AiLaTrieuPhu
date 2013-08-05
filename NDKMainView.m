@@ -59,6 +59,7 @@
 - (IBAction)btnHighScore:(id)sender {
     NDKHighScoreView *highView = [[NDKHighScoreView alloc]initWithNibName:@"NDKHighScoreView" bundle:nil];
     [self.navigationController pushViewController:highView animated:YES];
+     //[self.view addSubview:highView.view];
 }
 
 - (IBAction)btnExit:(id)sender {
@@ -81,6 +82,7 @@
     [alert show];*/
     NDKStartView*startView = [[[NDKStartView alloc]initWithNibName:@"NDKStartView" bundle:nil]autorelease];
     [self.navigationController pushViewController:startView animated:YES];
+    //[self.view addSubview:startView.view];
 }
 
 @end

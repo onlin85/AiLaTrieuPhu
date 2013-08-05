@@ -8,12 +8,21 @@
 
 #import "NDKStartView.h"
 #import "NDKMainView.h"
+#import "NDKDatabaseQuestion.h"
+#import "NDKQuestionObject.h"
+#import "AudioLoadView.h"
+//#import "UIViewController+MJPopupViewController.h"
+//#import "NDKHelpKGPopUp.h"
 @interface NDKStartView ()
 
 @end
 
 @implementation NDKStartView
-
+static int check = 0;
+static NSArray * question;
+static NSString *rightAnswer;
+static int questionIndex = 0;
+static int randomIndexAnswer;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -28,10 +37,62 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.navigationController setNavigationBarHidden:YES];
-    [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(updateTimer:) userInfo:nil repeats:YES];
+   // [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(updateTimer:) userInfo:nil repeats:YES];
     //[_btnA setTitle:@"Kien Ngo" forState:(UIControlStateNormal|UIControlStateApplication|UIControlStateHighlighted)];
-    [_btnA setTitle:@"Normal" forState:UIControlStateNormal];
-    [_btnA setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    _questionLabel.numberOfLines=7;
+    
+    [self loadQuestion];
+     ++questionIndex;
+    NSString *stringIndex = [NSString stringWithFormat:@"%d", questionIndex];
+    _numQuest.text = stringIndex;
+
+}
+-(void)loadQuestion{
+    question = [[NDKDatabaseQuestion sharedDatabase]getQuestions];
+    
+    int numQuest = [question count];
+    NSLog(@"NUm Quest %d",numQuest);
+    
+    //  NDKQuestionObject *questInfo = [question objectAtIndex:5];
+    // _questionLabel.text= questInfo.answerS1;
+    // NSLog(@" Question %@  ",questInfo.answerS1);
+    int randomQuest;
+    randomQuest = arc4random()%numQuest;
+    NSLog(@"Random Question %d",randomQuest);
+    NDKQuestionObject *questInfo = [question objectAtIndex:randomQuest];
+    _questionLabel.text=questInfo.question;
+    rightAnswer = questInfo.answertrue;
+    randomIndexAnswer = arc4random()%3;
+    
+    if(randomIndexAnswer == 0){
+        [_btnA setTitle:questInfo.answerS1 forState:UIControlStateNormal];
+        [_btnB setTitle:questInfo.answerS2 forState:UIControlStateNormal];
+        [_btnC setTitle:questInfo.answerS3 forState:UIControlStateNormal];
+        [_btnD setTitle:questInfo.answertrue forState:UIControlStateNormal];
+    }else if(randomIndexAnswer == 1){
+        [_btnD setTitle:questInfo.answerS1 forState:UIControlStateNormal];
+        [_btnB setTitle:questInfo.answerS2 forState:UIControlStateNormal];
+        [_btnC setTitle:questInfo.answerS3 forState:UIControlStateNormal];
+        [_btnA setTitle:questInfo.answertrue forState:UIControlStateNormal];
+    }else if(randomIndexAnswer == 2){
+        [_btnA setTitle:questInfo.answerS1 forState:UIControlStateNormal];
+        [_btnD setTitle:questInfo.answerS2 forState:UIControlStateNormal];
+        [_btnC setTitle:questInfo.answerS3 forState:UIControlStateNormal];
+        [_btnB setTitle:questInfo.answertrue forState:UIControlStateNormal];
+    }else{
+        [_btnB setTitle:questInfo.answerS1 forState:UIControlStateNormal];
+        [_btnA setTitle:questInfo.answerS2 forState:UIControlStateNormal];
+        [_btnD setTitle:questInfo.answerS3 forState:UIControlStateNormal];
+        [_btnC setTitle:questInfo.answertrue forState:UIControlStateNormal];
+    }
+    
+    [_btnA setCenter:CGPointMake(150, 210)];
+    [_btnB setCenter:CGPointMake(150, 255)];
+    [_btnC setCenter:CGPointMake(150, 320)];
+    [_btnD setCenter:CGPointMake(150, 365)];
+    
+    [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(updateTimer:) userInfo:nil repeats:YES];
+
 }
 
 -(void)updateTimer:(NSTimer*)theTimer{
@@ -71,21 +132,71 @@
 }
 
 - (IBAction)btn50_50:(id)sender {
-  //  UIAlertView *alert = [[[UIAlertView alloc]initWithTitle:nil message:@"Bạn muốn sử dụng sự giải thoát /50/50?" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"NO",nil]autorelease];
-  //  [alert show];
+    //UIAlertView *alert = [[[UIAlertView alloc]initWithTitle:nil message:@"Bạn muốn sử dụng sự giải thoát /50/50?" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"NO",nil]autorelease];
+   //[alert show];
+    int randomHidden = arc4random()%3;
+    NSLog(@"Random Hidden %d",randomHidden);
+    
+    if (randomIndexAnswer == 0) {
+        _btnD.hidden=NO;
+        _btnB.hidden=YES;
+        _btnC.hidden=YES;
+    }else if(randomIndexAnswer == 1){
+        _btnA.hidden=NO;
+        _btnB.hidden=YES;
+        _btnD.hidden=YES;
+    }else if (randomIndexAnswer==2){
+        _btnB.hidden=NO;
+        _btnC.hidden=YES;
+        _btnA.hidden=YES;
+    }else{
+        _btnC.hidden=NO;
+        _btnA.hidden=YES;
+        _btnB.hidden=YES;
+    }
+    _btn50_50.hidden=YES;
 }
 - (void)dealloc {
-
-    [_timeLabel release];
     [_btnA release];
     [_btnB release];
     [_btnC release];
     [_btnD release];
     [_labelTime release];
+    [_questionLabel release];
+    [_labelTime release];
+    [_soundSet release];
+    [_numQuest release];
+    [_changeQuestion release];
+    [_btn50_50 release];
     [super dealloc];
 }
-- (IBAction)btnHome:(id)sender {
+- (IBAction)btnMuteVolumne:(id)sender {
+    check++;
+    audioLoad = [[AudioLoadView sharedObject]init];
+    if(check%2!=0){
+        [audioLoad stopAudio];
+      //  [_soundSet setBackgroundImage:@"speakermute32.png" forState:UIControlStateNormal];
+    }else{
+        [audioLoad playAudio];
+       // [_soundSet setBackgroundImage:@"speaker32.png" forState:UIControlStateNormal];
+    }
+}
+- (IBAction)btnHomeBack:(id)sender {
     NDKMainView *main = [[[NDKMainView alloc]initWithNibName:@"NDKMainView" bundle:nil]autorelease];
     [self.navigationController pushViewController:main animated:YES];
+    //[self.view removeFromSuperview];
+
+}
+
+
+- (IBAction)btnRefresh:(id)sender {
+    [self performSelector:@selector(loadQuestion)];
+    _changeQuestion.hidden=YES;
+}
+
+- (IBAction)btnHelpKG:(id)sender {
+   // NDKHelpKGPopUp *detailHelp = [[NDKHelpKGPopUp alloc]initWithNibName:@"NDKHelpKGPopUp" bundle:nil];
+   // [self presentPopupViewController:detailHelp animationType:1];
+
 }
 @end
