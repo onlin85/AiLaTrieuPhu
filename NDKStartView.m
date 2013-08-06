@@ -32,6 +32,35 @@ static int randomIndexAnswer;
     return self;
 }
 
+//
+// HongPH: Hàm này được sử dụng để tính điểm trong chương trình ai là triệu phú
+// qIndex: số thứ tự của câu hỏi (tính từ 0)
+//
+- (int) TinhDiem : (int)qIndex
+{
+    int tienThuong[11];
+    tienThuong[0]=200000;
+    tienThuong[1]=400000;
+    tienThuong[2]=600000;
+    tienThuong[3]=1000000;
+    tienThuong[4]=2000000;
+    tienThuong[5]=3000000;
+    tienThuong[6]=6000000;
+    tienThuong[7]=10000000;
+    tienThuong[8]=14000000;
+    tienThuong[9]=22000000;
+    tienThuong[10]=30000000;
+    
+    
+    
+    if (qIndex==0)
+        return 0;
+    else
+    {
+        return tienThuong[qIndex];
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
