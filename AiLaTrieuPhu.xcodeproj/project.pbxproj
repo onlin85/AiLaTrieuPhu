@@ -54,6 +54,7 @@
 		2FD219C217A6DD4F00CFC967 /* NDKOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD219C017A6DD4F00CFC967 /* NDKOptionView.m */; };
 		2FD219C317A6DD4F00CFC967 /* NDKOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD219C117A6DD4F00CFC967 /* NDKOptionView.xib */; };
 		2FED55CA17AE942B007BD92C /* NDKHighScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FED55C917AE942B007BD92C /* NDKHighScore.m */; };
+		EBFAD8DB17B09DB00000DCD8 /* AiLaTrieuPhu.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = EBFAD8DA17B09DB00000DCD8 /* AiLaTrieuPhu.sqlite3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +118,7 @@
 		2FD219C117A6DD4F00CFC967 /* NDKOptionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NDKOptionView.xib; path = ../NDKOptionView.xib; sourceTree = "<group>"; };
 		2FED55C817AE942B007BD92C /* NDKHighScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDKHighScore.h; sourceTree = "<group>"; };
 		2FED55C917AE942B007BD92C /* NDKHighScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDKHighScore.m; sourceTree = "<group>"; };
+		EBFAD8DA17B09DB00000DCD8 /* AiLaTrieuPhu.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = AiLaTrieuPhu.sqlite3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				2F3CA95F17AE5AE9006115BB /* NDKDatabaseQuestion.m */,
 				2F3CA95B17AE5AC3006115BB /* NDKQuestionObject.h */,
 				2F3CA95C17AE5AC3006115BB /* NDKQuestionObject.m */,
+				EBFAD8DA17B09DB00000DCD8 /* AiLaTrieuPhu.sqlite3 */,
 				2F3CA94A17AE5802006115BB /* libsqlite3.0.dylib */,
 				2F987C0B17A5868D00893057 /* Sources */,
 				2F987C0417A5868D00893057 /* Frameworks */,
@@ -326,6 +329,7 @@
 				2F33A05E17A7468600E2AB43 /* NDKEmptyCell.xib in Resources */,
 				2F982BBD17A820A5002AE9A1 /* NDKStartView.xib in Resources */,
 				2F982BC417A828A2002AE9A1 /* call.jpg in Resources */,
+				EBFAD8DB17B09DB00000DCD8 /* AiLaTrieuPhu.sqlite3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
